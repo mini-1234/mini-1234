@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Hotel Website    
+</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <script src="jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/hotel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+const body = document.body;
+const btn = document.querySelectorAll('.button')[0];
+
+btn.addEventListener('mouseenter', () => {
+	body.classList.add('show');
+});
+
+btn.addEventListener('mouseleave', () => {
+	body.classList.remove('show');
+});    
+</script>
+<script>
+$('.nav__toggle-btn').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu button");
+    $("#mainListDiv").toggleClass("nav__wrapper--visible");
+    $("#mainListDiv").fadeIn();
+});
+$(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('highlight');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('highlight');
+            }*
+                
+        });
+</script>	
+</head>
+    <body>
+   <!-- ===== NAVBAR BLOCK =====
+    ######################### -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="hotel.html">Roomex</a>
+        </div>
+        <div id="mainListDiv" class="main_list nav__wrapper">
+            <ul class="navlinks nav__wrapper__list">
+                <li class="nav__wrapper__list__item"><a href="hotel.html">Home</a></li>
+                <li class="nav__wrapper__list__item"><a href="rooms.html">Rooms</a></li>
+                <li class="nav__wrapper__list__item"><a href="#">Services</a></li>
+                <li class="nav__wrapper__list__item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger nav__toggle-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </nav>
+
+        <!-- =========== PAGE TITLE ========== -->
+        <div class="page_title gradient_overlay" style="background: url(img/rh_dxbbb_deluxe_king_1.jpg);background-position:center;">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <br><br>
+                            <h1>CONTACT US</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="index3.html">HOME</a></li>
+                                <li><a href="rooms-block.html">ABOUT</a></li>
+                                <li><a href="room3.html">BOOKING</a></li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="price">
+                                <div class="inner">
+                                    €90 <span>per night</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ========== MAIN ========== -->
+        <main id="contact_page">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-8">
+                        <div class="main_title a_left">
+                            <h2>CONTACT US</h2>
+                           
+                        </div>
+                        <form id="contact-form-page">
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="control-label">Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required="true">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="control-label">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="true">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6">
+                                    <label class="control-label">Phone</label>
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone" required="true">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="control-label">Message</label>
+                                    <textarea class="form-control" name="message" placeholder="Your Message..." required="true"></textarea>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="button  btn_blue mt40 upper pull-right">
+                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send Your Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="main_title a_left">
+                            <h2>GET IN TOUCH</h2>
+                           
+                        </div>
+                        <ul class="contact-info upper">
+                            <li>
+                                <span>ADDRESS:</span> New York, London, SG18 8EB
+                            </li>
+                            <li>
+                                <span>PHONE:</span>088 7635432
+                            </li>
+                            <li>
+                                <span>EMAIL:</span> INFO@ROOMEX.COM
+                            </li>
+                        </ul>
+                        <div class="social_media">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+
+        <!-- ========== FOOTER ========== -->
+           <footer>
+            <div class="inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 widget">
+                            <div class="about">
+                                <a href="hotel.html"><h1 height="130" style="margin:0;" alt="Logo">ROOMEX</h1></a>
+                                <p>The hotel is a traditional English Hotel offering scrummy cuisine, homely surroundings and 32 en-suite bedrooms.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Latest Events</h5>
+                            <ul class="blog_posts">
+                                <li><a href="#">Halloween</a> <small>oct 13, 2019</small></li>
+                                <li><a href="#">Easter event</a> <small>dec 25, 2019</small></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Useful Links</h5>
+                            <ul class="useful_links">
+                                <li><a href="#">TWITTER</a></li>
+                                <li><a href="#">FACEBOOK</a></li>
+                                <li><a href="#">INSTAGRAM</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Contact Us</h5>
+                            <address>
+								<ul class="address_details">
+									<li><a href="#"><i class="glyphicon glyphicon-map-marker"></i>New York, London, SG18 8EB</a></li>
+									<li><i class="glyphicon glyphicon-phone-alt"></i> Phone: <a href="#"> 088 7635432</a></li>
+									<li><i class="fa fa-envelope"></i> Email: <a href="#">INFO@ROOMEX.com</a></li>
+								</ul>
+							</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="copyrights">
+                                 Copyright 2019 <a href="hotel.html">Roomex Hotel</a> All Rights Reserved.
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="social_media">
+                                <a class="facebook" data-original-title="Facebook" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter" data-original-title="Twitter" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="instagram" data-original-title="Instagram" data-toggle="tooltip" href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <div id="back_to_top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+
+
+</body>
+</html>

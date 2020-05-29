@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Hotel Website    
+</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <script src="jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/hotel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+const body = document.body;
+const btn = document.querySelectorAll('.button')[0];
+
+btn.addEventListener('mouseenter', () => {
+	body.classList.add('show');
+});
+
+btn.addEventListener('mouseleave', () => {
+	body.classList.remove('show');
+});    
+</script>
+<script>
+$('.nav__toggle-btn').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu button");
+    $("#mainListDiv").toggleClass("nav__wrapper--visible");
+    $("#mainListDiv").fadeIn();
+});
+$(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('highlight');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('highlight');
+            }*
+                
+        });
+</script>	
+</head>
+    <body>
+   <!-- ===== NAVBAR BLOCK =====
+    ######################### -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="hotel.html">Roomex</a>
+        </div>
+        <div id="mainListDiv" class="main_list nav__wrapper">
+            <ul class="navlinks nav__wrapper__list">
+                <li class="nav__wrapper__list__item"><a href="hotel.html">Home</a></li>
+                <li class="nav__wrapper__list__item"><a href="rooms.html">Rooms</a></li>
+                <li class="nav__wrapper__list__item"><a href="#">Services</a></li>
+                <li class="nav__wrapper__list__item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger nav__toggle-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </nav>
+    <!-- ===== END OF NAVBAR BLOCK =====
+    ################################ -->
+         <div class="container-fluid text-center background">
+             <div class="text">
+             <h1>WELCOME TO LUXURY RESORT</h1></div>
+             <div class="row">
+             <div class="col-md-12 col-sm-12 col-xs-12">
+                 <form>
+                    <div class="row">
+                          <div class="col-md-3 col-sm-3 col-xs-12">
+  <input type="date" class="booking_input" placeholder="Check in" required="required">
+    </div>
+                                                  <div class="col-md-3 col-sm-3 col-xs-12">
+    <div class="form-group">
+  <input type="date" class="booking_input" placeholder="Check in" required="required">
+    </div>
+    </div>
+          
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+    <div class="form-group">
+     <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required">
+    </div>
+    </div>
+                        
+                                        <div class="col-md-2 col-sm-2 col-xs-12">
+<input type="number" class="booking_input booking_input_b" placeholder="Room" required="required">
+                                           
+    </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                         <button class="booking_button trans_200">Book Now</button>
+                        </div>
+                        
+    
+                        </div>
+  </form>
+                 </div>
+             </div>
+        </div>
+        
+             <div class="container welcome">
+             <div class="row">
+            <div class="col-lg-12 col-mg-12 col-xs-12">
+            <div class="row">
+                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+              <img src="img/img_2.png" class="img-responsive">  
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+               <h1>WELCOME!</h1>
+                <hr>
+                <br>
+                <br>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio, optio odit consectetur adipisci.</p>
+                <p> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <button class="button"><span>Learn more</span></button> or <a href="#"><p class="watch">Watch video</p></a>
+            </div>
+            </div>     
+            </div>     
+            </div>
+        </div>
+        <div class="container text-center rooms-main">
+        <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+         <h1>ROOMS & SUITES</h1> 
+            <hr>
+        <div class="row rooms">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/rooms/pm_deluxe-room_800x480_1.jpg"> 
+            <h2>Single Room</h2>
+            <h4>$200 / per night</h4>
+        </div>    
+        </div>
+            
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/rooms/palazzo-bella_1870x1246_1.jpg.resize.0.0.640.420.jpg">
+            <h2>Double Room</h2>
+            <h4>$100 / per night</h4>
+        </div>    
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/rooms/CortonaInn-Gallery-22-5bf580f3bdb0f.jpg">
+            <h2>Children Room</h2>
+            <h4>$150 / per night</h4>
+        </div>    
+        </div>
+        </div>    
+        
+        <div class="row rooms">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/mulhwcc01mai17800x600.jpg"> 
+            <h2>Standard Room</h2>
+            <h4>$200 / per night</h4>
+        </div>    
+        </div>
+            
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/rooms/Elite-King.jpg">    
+            <h2>Luxury Room</h2>
+            <h4>$250 / per night</h4>
+        </div>    
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="thumbnail">
+        <img src="img/rooms/A2-Superior-room3-1800x1200.jpg"> 
+            <h2>Deluxe Room</h2>
+            <h4>$300 / per night</h4>
+        </div>    
+        </div>
+        </div>    
+        </div>
+        </div>
+            </div>
+
+        <div class="container text-center features-main">
+        <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>HOTEL FEATURES</h1>
+            <hr>
+            <div class="row features">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/resort%20(2).png">
+                <h2>Resort</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/sunbed.png">
+                <h2>Beach</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/tray.png">
+                <h2>Food and Drink</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            </div>
+            
+             <div class="row features">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/desk%20(5).png">
+                <h2>Desk Teller</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/pool%20(2).png">
+                <h2>Swimming Pool</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <img src="img/ICONS/parked-car%20(1).png">
+                <h2>Car Parking</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque eleifend orci ipsum, a bibendum.</p>
+            </div>
+            </div>
+             </div>    
+        </div>
+        </div>
+            
+        <div class="container-fluid c">
+  <h1>summer special 50% off</h1>
+  <div class="days-container">
+    <div class="days"></div>
+    <div class="days-label">days</div>
+  </div>
+  
+  <div class="hours-container">
+    <div class="hours"></div>
+    <div class="hours-label">hours</div>
+  </div>
+  
+  <div class="minutes-container">
+    <div class="minutes"></div>
+    <div class="minutes-label">minutes</div>
+  </div>
+  
+  <div class="seconds-container">
+    <div class="seconds"></div>
+    <div class="seconds-label">seconds</div>
+  </div>
+</div>
+        
+        
+                <!-- ========== FOOTER ========== -->
+           <footer>
+            <div class="inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 widget">
+                            <div class="about">
+                                <a href="hotel.html"><h1 height="130" style="margin:0;" alt="Logo">ROOMEX</h1></a>
+                                <p>The hotel is a traditional English Hotel offering scrummy cuisine, homely surroundings and 32 en-suite bedrooms.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Latest Events</h5>
+                            <ul class="blog_posts">
+                                <li><a href="#">Halloween</a> <small>oct 13, 2019</small></li>
+                                <li><a href="#">Easter event</a> <small>dec 25, 2019</small></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Useful Links</h5>
+                            <ul class="useful_links">
+                                <li><a href="#">TWITTER</a></li>
+                                <li><a href="#">FACEBOOK</a></li>
+                                <li><a href="#">INSTAGRAM</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 widget">
+                            <h5>Contact Us</h5>
+                            <address>
+								<ul class="address_details">
+									<li><a href="#"><i class="glyphicon glyphicon-map-marker"></i>New York, London, SG18 8EB</a></li>
+									<li><i class="glyphicon glyphicon-phone-alt"></i> Phone: <a href="#"> 088 7635432</a></li>
+									<li><i class="fa fa-envelope"></i> Email: <a href="#">INFO@ROOMEX.com</a></li>
+								</ul>
+							</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="copyrights">
+                                 Copyright 2019 <a href="hotel.html">Roomex Hotel</a> All Rights Reserved.
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="social_media">
+                                <a class="facebook" data-original-title="Facebook" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter" data-original-title="Twitter" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="instagram" data-original-title="Instagram" data-toggle="tooltip" href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>const countDownClock = (number = 100, format = 'seconds') => {
+  
+  const d = document;
+  const daysElement = d.querySelector('.days');
+  const hoursElement = d.querySelector('.hours');
+  const minutesElement = d.querySelector('.minutes');
+  const secondsElement = d.querySelector('.seconds');
+  let countdown;
+  convertFormat(format);
+  
+  
+  function convertFormat(format) {
+    switch(format) {
+      case 'seconds':
+        return timer(number);
+      case 'minutes':
+        return timer(number * 60);
+        case 'hours':
+        return timer(number * 60 * 60);
+      case 'days':
+        return timer(number * 60 * 60 * 24);             
+    }
+  }
+
+  function timer(seconds) {
+    const now = Date.now();
+    const then = now + seconds * 1000;
+
+    countdown = setInterval(() => {
+      const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+      if(secondsLeft <= 0) {
+        clearInterval(countdown);
+        return;
+      };
+
+      displayTimeLeft(secondsLeft);
+
+    },1000);
+  }
+
+  function displayTimeLeft(seconds) {
+    daysElement.textContent = Math.floor(seconds / 86400);
+    hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+    minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+    secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  }
+}
+
+
+/*
+  start countdown
+  enter number and format
+  days, hours, minutes or seconds
+*/
+countDownClock(20, 'days');</script>
+             
+    </body>
+</html>
